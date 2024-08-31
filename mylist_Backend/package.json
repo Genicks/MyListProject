@@ -4,8 +4,9 @@
   "description": "Backend",
   "main": "index.js",
   "scripts": {
-    "test": "node index",
-    "dev": "nodemon index"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "build": "npm install"
   },
   "author": "Nickelcy Francois",
   "license": "ISC",
