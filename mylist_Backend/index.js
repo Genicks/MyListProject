@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 // const cors = require('cors');
 import cors from 'cors'
-app.use(cors());
 
 dotenv.config();
 
@@ -25,8 +24,8 @@ mongoose.connect(MONGO_URL)
         console.error('Database connection error:', error);
         process.exit(1); 
     });
-
-const contentSchema = new mongoose.Schema({
+    
+    const contentSchema = new mongoose.Schema({
     title: String,
     rating: Number,
     genres: [String],
@@ -39,6 +38,7 @@ const Content = mongoose.model("animations", contentSchema);
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.json({"response": "https://cdn.noitatnemucod.net/thumbnail/300x400/100/5a31556ec0447ef5b3acfba75f2030b4.jpg"});
