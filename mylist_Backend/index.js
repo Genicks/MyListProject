@@ -1,7 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-const cors = require('cors');
+// const cors = require('cors');
+import cors from 'cors'
 app.use(cors());
 
 dotenv.config();
